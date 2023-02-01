@@ -1,42 +1,51 @@
+https://www.hackerrank.com/challenges/apple-and-orange/problem?isFullScreen=true
+
+
 #include <bits/stdc++.h>
 using namespace std;
 int main()
 {
-    long s,t,a,b,m,n;
+    int s,t;
     cin>>s>>t;
+    int a,b;
     cin>>a>>b;
+    int m,n;
     cin>>m>>n;
-    long ar[m], arr[n];
-    for(int i=0;i<m;i++)
+    int apple[m],orange[n];
+    int i,j;
+    
+    for(i=0;i<m;i++)
     {
-        cin>>ar[i];
+        cin>>apple[i];
     }
-    for (int j=0;j<n;j++)
+    for(j=0;j<n;j++)
     {
-        cin>>arr[j];
+        cin>>orange[j];
     }
-    long s1=0;
-    long c1=0;
-    for (int i=0;i<m;i++)
+    int sum1=0;
+    int count1=0;
+    for(i=0;i<m;i++)
     {
-        s1=a+ar[i];
-        if (s1>=s && s1<=t)
+        sum1=a+apple[i];
+        if(sum1>=s && sum1<=t)
         {
-            c1++;
+            count1++;
         }
-        s1=0;
+        sum1=0;
     }
-    long s2=0;
-    long c2=0;
-    for (int j=0;j<n;j++)
+    
+    int sum2=0;
+    int count2=0;
+     for(j=0;j<n;j++)
     {
-        s2=b+arr[j];
-        if (s2>=s && s2<=t)
+        sum2=b+orange[j];
+        if(sum2>=s && sum2<=t)
         {
-            c2++;
+            count2++;
         }
-        s2=0;
+        sum2=0;
     }
-    cout<<c1<<endl;
-    cout<<c2<<endl;
+    cout<<count1<<endl;
+    cout<<count2<<endl;
+    
 }
